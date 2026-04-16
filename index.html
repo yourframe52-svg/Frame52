@@ -28,24 +28,14 @@ body {
   z-index: 9999;
 }
 
-#loader h1 {
-  animation: fade 1.5s infinite alternate;
-}
-
-@keyframes fade {
-  from {opacity: 0.3;}
-  to {opacity: 1;}
-}
-
 /* HERO */
 header {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7), black),
-              url('https://source.unsplash.com/1600x900/?cinematic,wedding') center/cover;
+  background: linear-gradient(rgba(0,0,0,0.6), black),
+              url('hero.jpg') center/cover no-repeat;
   text-align: center;
 }
 
@@ -53,6 +43,7 @@ header h1 {
   font-size: 50px;
 }
 
+/* NAV */
 nav {
   position: sticky;
   top: 0;
@@ -61,14 +52,9 @@ nav {
   justify-content: center;
   gap: 25px;
   padding: 15px;
-  backdrop-filter: blur(10px);
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
+/* SECTIONS */
 section {
   padding: 80px 20px;
   text-align: center;
@@ -119,10 +105,9 @@ button {
   background: #ff4c4c;
   color: white;
   border: none;
-  cursor: pointer;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -130,7 +115,6 @@ button {
   background: #25D366;
   padding: 15px;
   border-radius: 50%;
-  font-size: 20px;
   text-decoration: none;
   color: white;
 }
@@ -149,7 +133,6 @@ footer {
 
 <header>
   <h1>Frame52 Photography</h1>
-  <p>Capturing moments that last forever</p>
 </header>
 
 <nav>
@@ -161,16 +144,15 @@ footer {
 
 <section id="about">
   <h2>About</h2>
-  <p>Luxury wedding & event photography with cinematic storytelling.</p>
+  <p>Capturing real moments with a cinematic and artistic vision.</p>
 </section>
 
 <section id="gallery">
   <h2>Gallery</h2>
   <div class="gallery">
-    <img src="https://source.unsplash.com/400x300/?wedding" />
-    <img src="https://source.unsplash.com/400x300/?couple" />
-    <img src="https://source.unsplash.com/400x300/?event" />
-    <img src="https://source.unsplash.com/400x300/?portrait" />
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="hero.jpg">
   </div>
 </section>
 
@@ -195,16 +177,15 @@ footer {
   <p>© 2026 Frame52</p>
 </footer>
 
-<!-- WhatsApp -->
 <a class="whatsapp" href="https://wa.me/917416903124" target="_blank">💬</a>
 
 <script>
-// LOADER
+// Loader
 window.onload = () => {
   document.getElementById("loader").style.display = "none";
 };
 
-// SCROLL ANIMATION
+// Scroll animation
 const sections = document.querySelectorAll("section");
 window.addEventListener("scroll", () => {
   sections.forEach(sec => {
@@ -216,4 +197,4 @@ window.addEventListener("scroll", () => {
 </script>
 
 </body>
-  </html>
+</html>
