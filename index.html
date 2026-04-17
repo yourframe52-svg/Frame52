@@ -226,58 +226,33 @@
         .trust-item p { color: var(--text-muted); font-size: 0.95rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; }
 
         /* --- Gallery with Smooth Hover --- */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-        }
+ <div class="gallery-grid">
+    <div class="gallery-item" data-aos="fade-up" data-gallery-item>
+        <img src="https://raw.githubusercontent.com/yourframe52-svg/Frame52/main/Treeshot.jpg" alt="Nature">
+        <div class="gallery-overlay"><h4>The Forest Trail</h4><p>Nature</p></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-gallery-item>
+        <img src="https://raw.githubusercontent.com/yourframe52-svg/Frame52/main/bayofbengal.jpg" alt="Beach">
+        <div class="gallery-overlay"><h4>Bay of Bengal</h4><p>Travel</p></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-gallery-item>
+        <img src="https://raw.githubusercontent.com/yourframe52-svg/Frame52/main/Cycle.jpg" alt="Cyclist">
+        <div class="gallery-overlay"><h4>The Lone Cyclist</h4><p>Cinematic</p></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-gallery-item>
+        <img src="https://raw.githubusercontent.com/yourframe52-svg/Frame52/main/Vanajangi.jpg" alt="Station">
+        <div class="gallery-overlay"><h4>Misty Vanajangi</h4><p>Landscape</p></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-gallery-item>
+        <img src="https://raw.githubusercontent.com/yourframe52-svg/Frame52/main/couple.jpg" alt="Couple">
+        <div class="gallery-overlay"><h4>Timeless Bond</h4><p>Portrait</p></div>
+    </div>
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-gallery-item>
+        <img src="https://raw.githubusercontent.com/yourframe52-svg/Frame52/main/Shihtzu.jpg" alt="Pet">
+        <div class="gallery-overlay"><h4>Pure Joy</h4><p>Pet Photography</p></div>
+    </div>
+</div>
 
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            aspect-ratio: 4/5;
-            border-radius: 8px;
-            background: #111;
-            cursor: pointer; /* Key signifier for lightbox */
-            transition: var(--transition-smooth);
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1), filter 0.6s ease;
-            filter: brightness(0.9) grayscale(10%);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-            filter: brightness(1) grayscale(0%);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0; left: 0; width: 100%;
-            padding: 30px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
-            opacity: 0;
-            transform: translateY(20px);
-            transition: var(--transition-smooth);
-            z-index: 2;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .gallery-overlay h4 { font-size: 1.4rem; color: white; margin-bottom: 5px; }
-        .gallery-overlay p { font-size: 0.9rem; color: #ccc; font-weight: 300; }
 
         /* --- Super Smooth Lightbox --- */
         .lightbox {
