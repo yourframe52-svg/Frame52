@@ -1,200 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Frames52shotes Photography</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0b0b0b;
-  color: white;
-  scroll-behavior: smooth;
-}
-
-/* LOADER */
-#loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-/* HERO */
-header {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.6), black),
-              url('hero.jpg') center/cover no-repeat;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 50px;
-}
-
-/* NAV */
-nav {
-  position: sticky;
-  top: 0;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 15px;
-}
-
-/* SECTIONS */
-section {
-  padding: 80px 20px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
-  transition: 0.4s;
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
-}
-
-/* FORM */
-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 5px;
-  border: none;
-}
-
-button {
-  padding: 12px;
-  background: #ff4c4c;
-  color: white;
-  border: none;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  padding: 15px;
-  border-radius: 50%;
-  text-decoration: none;
-  color: white;
-}
-
-/* FOOTER */
-footer {
-  padding: 20px;
-  background: black;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frames52shots | Cinematic Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#E63946',
+                        darkBg: '#0A0A0A',
+                        darkCard: '#141414',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0A0A0A; color: #fff; scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.3), rgba(10,10,10,1)); }
+        .glass-nav { backdrop-filter: blur(10px); background: rgba(10, 10, 10, 0.8); }
+        .parallax { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+        /* Red Button Glow */
+        .btn-primary:hover { box-shadow: 0 0 20px rgba(230, 57, 70, 0.4); transform: translateY(-2px); transition: all 0.3s ease; }
+    </style>
 </head>
+<body class="font-sans antialiased">
 
-<body>
+    <nav class="fixed w-full z-50 glass-nav border-b border-white/10 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-serif font-bold tracking-tighter">frames<span class="text-brandRed">52</span>shots</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
+            <a href="#gallery" class="hover:text-brandRed transition">Work</a>
+            <a href="#services" class="hover:text-brandRed transition">Pricing</a>
+            <a href="#contact" class="hover:text-brandRed transition">Contact</a>
+        </div>
+        <a href="https://wa.me/917416903124" class="bg-brandRed px-5 py-2 text-xs font-bold uppercase tracking-widest btn-primary rounded">WhatsApp Us</a>
+    </nav>
 
-<div id="loader"><h1>Frames52shotes</h1></div>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 parallax z-0" style="background-image: url('https://images.unsplash.com/photo-1474546652694-a33dd8161d66?auto=format&fit=crop&q=80');"></div>
+        <div class="absolute inset-0 hero-gradient z-10"></div>
+        
+        <div class="relative z-20 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
+            <h1 class="text-5xl md:text-8xl font-serif mb-6 leading-tight">Capturing Moments That Feel<br><span class="italic font-light">Cinematic & Timeless</span></h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">Professional photography for weddings, events, and portraits.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#booking" class="bg-brandRed text-white px-10 py-4 rounded font-bold uppercase tracking-widest btn-primary">Book Your Shoot Now</a>
+                <a href="#gallery" class="border border-white/30 hover:border-white px-10 py-4 rounded font-bold uppercase tracking-widest transition">View Work</a>
+            </div>
+        </div>
+    </section>
 
-<header>
-  <h1>Frames52shotes Photography</h1>
-</header>
+    <div class="bg-darkCard py-12 border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-gray-500 uppercase tracking-widest text-xs mb-8">Trusted by clients for capturing unforgettable moments</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div><h3 class="text-3xl font-serif text-brandRed">50+</h3><p class="text-gray-500 text-sm">Shoots Completed</p></div>
+                <div><h3 class="text-3xl font-serif text-brandRed">100%</h3><p class="text-gray-500 text-sm">Client Satisfaction</p></div>
+                <div><h3 class="text-3xl font-serif text-brandRed">4k</h3><p class="text-gray-500 text-sm">Cinematic Quality</p></div>
+                <div><h3 class="text-3xl font-serif text-brandRed">24h</h3><p class="text-gray-500 text-sm">Initial Previews</p></div>
+            </div>
+        </div>
+    </div>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#booking">Book</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <section class="py-24 container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&q=80" alt="About frames52shots" class="rounded-lg grayscale hover:grayscale-0 transition duration-700">
+        </div>
+        <div data-aos="fade-left">
+            <h2 class="text-4xl font-serif mb-6">Our Story</h2>
+            <p class="text-gray-400 leading-relaxed mb-6">At <strong>frames52shots</strong>, we don't just take pictures; we archive emotions. Our passion lies in storytelling through a lens, finding the "mood" in every frame—whether it's the quiet anticipation of a train station or the vast freedom of the beach.</p>
+            <p class="text-gray-400 leading-relaxed">We believe every person has a cinematic story waiting to be told. Our mission is to make your real moments look like scenes from a classic film.</p>
+        </div>
+    </section>
 
-<section id="about">
-  <h2>About</h2>
-  <p>Capturing real moments with a cinematic and artistic vision.</p>
-</section>
+    <section id="gallery" class="py-24 bg-darkBg">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl font-serif mb-4">Real moments captured by frames52shots</h2>
+            <div class="h-1 w-20 bg-brandRed mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-4">
+            <div class="group relative overflow-hidden h-80 bg-gray-800 rounded-lg" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 to-transparent">
+                    <p class="text-sm tracking-widest uppercase">The Train Station Series</p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden h-80 bg-gray-800 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 to-transparent">
+                    <p class="text-sm tracking-widest uppercase">Coastal Whispers</p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden h-80 bg-gray-800 rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1474546652694-a33dd8161d66?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 to-transparent">
+                    <p class="text-sm tracking-widest uppercase">Motion & Life</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="img1.jpg">
-    <img src="img2.jpg">
-    <img src="hero.jpg">
-  </div>
-</section>
+    <section id="services" class="py-24 container mx-auto px-6">
+        <h2 class="text-4xl font-serif text-center mb-16">Choose Your Experience</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-darkCard p-10 border border-white/5 rounded-2xl hover:border-brandRed/30 transition">
+                <h3 class="text-xl font-bold mb-4">Portrait Session</h3>
+                <div class="text-4xl font-serif mb-6">₹2,999</div>
+                <ul class="text-gray-400 space-y-4 mb-10 text-sm">
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> 1 Hour Session</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> 10 High-Res Edited Photos</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Single Location</li>
+                </ul>
+                <a href="#booking" class="block text-center border border-white/20 py-3 rounded hover:bg-white hover:text-black font-bold transition uppercase text-xs tracking-widest">Choose This Plan</a>
+            </div>
+            <div class="bg-darkCard p-10 border-2 border-brandRed rounded-2xl relative transform md:-translate-y-4 shadow-2xl">
+                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brandRed text-white px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">Most Popular</span>
+                <h3 class="text-xl font-bold mb-4">Event Coverage</h3>
+                <div class="text-4xl font-serif mb-6">₹7,499</div>
+                <ul class="text-gray-400 space-y-4 mb-10 text-sm">
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> 4 Hours Session</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> 40+ Color Graded Photos</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Cinematic Post-Processing</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Social Media Previews</li>
+                </ul>
+                <a href="#booking" class="block text-center bg-brandRed py-3 rounded btn-primary font-bold uppercase text-xs tracking-widest">Choose This Plan</a>
+            </div>
+            <div class="bg-darkCard p-10 border border-white/5 rounded-2xl hover:border-brandRed/30 transition">
+                <h3 class="text-xl font-bold mb-4">The Film Look</h3>
+                <div class="text-4xl font-serif mb-6">₹14,999</div>
+                <ul class="text-gray-400 space-y-4 mb-10 text-sm">
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Full Day Coverage</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Unlimited Edited Photos</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Priority 48h Delivery</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Physical Photo Album</li>
+                </ul>
+                <a href="#booking" class="block text-center border border-white/20 py-3 rounded hover:bg-white hover:text-black font-bold transition uppercase text-xs tracking-widest">Choose This Plan</a>
+            </div>
+        </div>
+    </section>
 
-<section id="booking">
-  <h2>Book a Shoot</h2>
-  <form action="https://formsubmit.co/yourframe52@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <input type="text" name="event" placeholder="Event Type" required>
-    <textarea name="message" placeholder="Details"></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</section>
+    <section id="booking" class="py-24 bg-darkCard">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl font-serif mb-6">Let's Create Magic</h2>
+                <p class="text-gray-400 mb-8">Ready to book your session or have questions? Fill out the form or reach out directly.</p>
+                <div class="space-y-4 mb-8">
+                    <p><i class="fas fa-envelope text-brandRed mr-4"></i> yourframe52@gmail.com</p>
+                    <p><i class="fas fa-phone text-brandRed mr-4"></i> +91 7416903124</p>
+                </div>
+                <p class="text-sm font-bold text-brandRed uppercase tracking-widest animate-pulse">Limited slots available — book early</p>
+            </div>
+            
+            <form action="https://formsubmit.co/yourframe52@gmail.com" method="POST" class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white">
+                <input type="tel" name="phone" placeholder="Phone Number" required class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white">
+                <select name="type" class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white">
+                    <option value="portrait">Portrait Shoot</option>
+                    <option value="event">Event Coverage</option>
+                    <option value="wedding">Wedding / Pre-Wedding</option>
+                </select>
+                <textarea name="message" placeholder="Tell us about your shoot" rows="4" class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white"></textarea>
+                <button type="submit" class="w-full bg-brandRed py-4 rounded font-bold uppercase tracking-widest btn-primary">Secure My Slot</button>
+                <input type="hidden" name="_next" value="https://yourusername.github.io/frames52shots/success.html">
+            </form>
+        </div>
+    </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: yourframe52@gmail.com</p>
-  <p>Phone: 7416903124</p>
-</section>
+    <section class="py-24 container mx-auto px-6 italic text-center">
+        <h2 class="text-3xl font-serif mb-12 not-italic">Client Love</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div data-aos="fade-up">
+                <p class="text-xl text-gray-300 mb-4">"The mood in the photos was exactly what I wanted. It felt like I was looking at movie stills!"</p>
+                <span class="text-brandRed font-bold not-italic">— Rahul K.</span>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <p class="text-xl text-gray-300 mb-4">"Amazing experience, highly recommended! Professional, quick, and the color grading is top-tier."</p>
+                <span class="text-brandRed font-bold not-italic">— Sneha M.</span>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <p>© 2026 Frames52shotes</p>
-</footer>
+    <a href="https://wa.me/917416903124" class="fixed bottom-8 right-8 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl z-50 hover:scale-110 transition duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<a class="whatsapp" href="https://wa.me/917416903124" target="_blank">💬</a>
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 frames52shots. All rights reserved.</p>
+    </footer>
 
-<script>
-// Loader
-window.onload = () => {
-  document.getElementById("loader").style.display = "none";
-};
-
-// Scroll animation
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
-      sec.classList.add("show");
-    }
-  });
-});
-</script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
 </body>
 </html>
