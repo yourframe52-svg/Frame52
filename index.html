@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>frames52shots | Cinematic Photography</title>
+    <title>frames52shots | Authentic Stories. Real Emotions.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -33,6 +33,9 @@
         .parallax { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
         /* Red Button Glow */
         .btn-primary:hover { box-shadow: 0 0 20px rgba(230, 57, 70, 0.4); transform: translateY(-2px); transition: all 0.3s ease; }
+        /* Gallery Image Shimmer Effect on Hover */
+        .group:hover .shimmer { animation: shimmer 1.5s infinite; }
+        @keyframes shimmer { 0% { opacity: 0; } 50% { opacity: 0.1; } 100% { opacity: 0; } }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -40,79 +43,99 @@
     <nav class="fixed w-full z-50 glass-nav border-b border-white/10 px-6 py-4 flex justify-between items-center">
         <div class="text-2xl font-serif font-bold tracking-tighter">frames<span class="text-brandRed">52</span>shots</div>
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
+            <a href="#about" class="hover:text-brandRed transition">Story</a>
             <a href="#gallery" class="hover:text-brandRed transition">Work</a>
             <a href="#services" class="hover:text-brandRed transition">Pricing</a>
-            <a href="#contact" class="hover:text-brandRed transition">Contact</a>
+            <a href="#booking" class="hover:text-brandRed transition">Book Now</a>
         </div>
         <a href="https://wa.me/917416903124" class="bg-brandRed px-5 py-2 text-xs font-bold uppercase tracking-widest btn-primary rounded">WhatsApp Us</a>
     </nav>
 
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 parallax z-0" style="background-image: url('https://images.unsplash.com/photo-1474546652694-a33dd8161d66?auto=format&fit=crop&q=80');"></div>
+        <div class="absolute inset-0 parallax z-0" style="background-image: url('YOUR_HOSTED_LINK_TO_image_8.png');"></div>
         <div class="absolute inset-0 hero-gradient z-10"></div>
         
         <div class="relative z-20 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
-            <h1 class="text-5xl md:text-8xl font-serif mb-6 leading-tight">Capturing Moments That Feel<br><span class="italic font-light">Cinematic & Timeless</span></h1>
-            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">Professional photography for weddings, events, and portraits.</p>
+            <h1 class="text-5xl md:text-8xl font-serif mb-6 leading-tight">We Frame Memories That Tell Your <span class="italic font-light">Authentic Story</span></h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">Vibrant, candid photography for portraits, travel, and adventure.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#booking" class="bg-brandRed text-white px-10 py-4 rounded font-bold uppercase tracking-widest btn-primary">Book Your Shoot Now</a>
-                <a href="#gallery" class="border border-white/30 hover:border-white px-10 py-4 rounded font-bold uppercase tracking-widest transition">View Work</a>
+                <a href="#booking" class="bg-brandRed text-white px-10 py-4 rounded font-bold uppercase tracking-widest btn-primary">Secure Your Slot</a>
+                <a href="#gallery" class="border border-white/30 hover:border-white px-10 py-4 rounded font-bold uppercase tracking-widest transition">Explore Work</a>
             </div>
         </div>
     </section>
 
     <div class="bg-darkCard py-12 border-y border-white/5">
         <div class="container mx-auto px-6">
-            <p class="text-center text-gray-500 uppercase tracking-widest text-xs mb-8">Trusted by clients for capturing unforgettable moments</p>
+            <p class="text-center text-gray-500 uppercase tracking-widest text-xs mb-8">Trusted by clients to capture the real moments</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div><h3 class="text-3xl font-serif text-brandRed">50+</h3><p class="text-gray-500 text-sm">Shoots Completed</p></div>
-                <div><h3 class="text-3xl font-serif text-brandRed">100%</h3><p class="text-gray-500 text-sm">Client Satisfaction</p></div>
-                <div><h3 class="text-3xl font-serif text-brandRed">4k</h3><p class="text-gray-500 text-sm">Cinematic Quality</p></div>
-                <div><h3 class="text-3xl font-serif text-brandRed">24h</h3><p class="text-gray-500 text-sm">Initial Previews</p></div>
+                <div><h3 class="text-3xl font-serif text-brandRed">75+</h3><p class="text-gray-500 text-sm">Candid Shoots</p></div>
+                <div><h3 class="text-3xl font-serif text-brandRed">100%</h3><p class="text-gray-500 text-sm">Authenticity Guarentee</p></div>
+                <div><h3 class="text-3xl font-serif text-brandRed">24h</h3><p class="text-gray-500 text-sm">Quick Previews</p></div>
+                <div><h3 class="text-3xl font-serif text-brandRed">Vibrant</h3><p class="text-gray-500 text-sm">Color Grading</p></div>
             </div>
         </div>
     </div>
 
-    <section class="py-24 container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <section id="about" class="py-24 container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div data-aos="fade-right">
-            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&q=80" alt="About frames52shots" class="rounded-lg grayscale hover:grayscale-0 transition duration-700">
+            <img src="YOUR_HOSTED_LINK_TO_image_6.png" alt="A frames52shots journey" class="rounded-lg grayscale hover:grayscale-0 transition duration-1000">
         </div>
         <div data-aos="fade-left">
-            <h2 class="text-4xl font-serif mb-6">Our Story</h2>
-            <p class="text-gray-400 leading-relaxed mb-6">At <strong>frames52shots</strong>, we don't just take pictures; we archive emotions. Our passion lies in storytelling through a lens, finding the "mood" in every frame—whether it's the quiet anticipation of a train station or the vast freedom of the beach.</p>
-            <p class="text-gray-400 leading-relaxed">We believe every person has a cinematic story waiting to be told. Our mission is to make your real moments look like scenes from a classic film.</p>
+            <h2 class="text-4xl font-serif mb-6">Authentic Stories. <span class="italic font-light">Real Emotions.</span></h2>
+            <p class="text-gray-400 leading-relaxed mb-6">At <strong>frames52shots</strong>, we don’t just frame scenes; we archive memories. Our photography is defined by capturing real, fleeting moments where genuine emotion shines through. We believe the most beautiful portraits are the ones where you aren't posing—just being yourself, living your life.</p>
+            <p class="text-gray-400 leading-relaxed">Whether it’s the quiet adventure of a solo forest walk, the vibrant energy of friends sharing a moment, or the unique perspective of a portrait captured in perfect light, our goal is to deliver authentic stories that feel as real as the day they happened.</p>
         </div>
     </section>
 
     <section id="gallery" class="py-24 bg-darkBg">
         <div class="container mx-auto px-6 text-center mb-16">
-            <h2 class="text-4xl font-serif mb-4">Real moments captured by frames52shots</h2>
-            <div class="h-1 w-20 bg-brandRed mx-auto"></div>
+            <h2 class="text-4xl font-serif mb-4">A Few Moments From Our Lens</h2>
+            <div class="h-1 w-20 bg-brandRed mx-auto mb-6"></div>
+            <p class="text-gray-500 uppercase tracking-widest text-xs">Stories told by frames52shots</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-4">
-            <div class="group relative overflow-hidden h-80 bg-gray-800 rounded-lg" data-aos="zoom-in">
-                <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 to-transparent">
-                    <p class="text-sm tracking-widest uppercase">The Train Station Series</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 px-4">
+            
+            <div class="group relative overflow-hidden h-[400px] md:h-[550px] bg-gray-800 rounded-lg md:col-span-1" data-aos="zoom-in">
+                <img src="YOUR_HOSTED_LINK_TO_image_0.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                <div class="absolute inset-0 shimmer bg-white/20 opacity-0 transition duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                    <p class="text-sm tracking-widest uppercase mb-1">Authentic Portrait</p>
+                    <p class="text-xs text-gray-400">Sunlight on a gentle soul.</p>
                 </div>
             </div>
-            <div class="group relative overflow-hidden h-80 bg-gray-800 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 to-transparent">
-                    <p class="text-sm tracking-widest uppercase">Coastal Whispers</p>
+
+            <div class="group relative overflow-hidden h-[400px] md:h-[550px] bg-gray-800 rounded-lg md:col-span-1" data-aos="zoom-in" data-aos-delay="100">
+                <img src="YOUR_HOSTED_LINK_TO_image_8.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                <div class="absolute inset-0 shimmer bg-white/20 opacity-0 transition duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                    <p class="text-sm tracking-widest uppercase mb-1">Adventure & Story</p>
+                    <p class="text-xs text-gray-400">A journey captured in pine.</p>
                 </div>
             </div>
-            <div class="group relative overflow-hidden h-80 bg-gray-800 rounded-lg" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1474546652694-a33dd8161d66?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 to-transparent">
-                    <p class="text-sm tracking-widest uppercase">Motion & Life</p>
+
+            <div class="group relative overflow-hidden h-[400px] md:h-[550px] bg-gray-800 rounded-lg md:col-span-1" data-aos="zoom-in" data-aos-delay="200">
+                <img src="YOUR_HOSTED_LINK_TO_image_4.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                <div class="absolute inset-0 shimmer bg-white/20 opacity-0 transition duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                    <p class="text-sm tracking-widest uppercase mb-1">Candid Moment</p>
+                    <p class="text-xs text-gray-400">Pure curiosity, framed in sunlight.</p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden h-[400px] md:h-[550px] bg-gray-800 rounded-lg md:col-span-1" data-aos="zoom-in" data-aos-delay="300">
+                <img src="YOUR_HOSTED_LINK_TO_image_9.png" class="w-full h-full object-cover transition duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                <div class="absolute inset-0 shimmer bg-white/20 opacity-0 transition duration-500"></div>
+                <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                    <p class="text-sm tracking-widest uppercase mb-1">Travel & Vibe</p>
+                    <p class="text-xs text-gray-400">Friends, nature, and the canopy.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="services" class="py-24 container mx-auto px-6">
-        <h2 class="text-4xl font-serif text-center mb-16">Choose Your Experience</h2>
+        <h2 class="text-4xl font-serif text-center mb-16">Choose Your Story Package</h2>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="bg-darkCard p-10 border border-white/5 rounded-2xl hover:border-brandRed/30 transition">
                 <h3 class="text-xl font-bold mb-4">Portrait Session</h3>
@@ -121,31 +144,34 @@
                     <li><i class="fas fa-check text-brandRed mr-2"></i> 1 Hour Session</li>
                     <li><i class="fas fa-check text-brandRed mr-2"></i> 10 High-Res Edited Photos</li>
                     <li><i class="fas fa-check text-brandRed mr-2"></i> Single Location</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Private Online Gallery</li>
                 </ul>
-                <a href="#booking" class="block text-center border border-white/20 py-3 rounded hover:bg-white hover:text-black font-bold transition uppercase text-xs tracking-widest">Choose This Plan</a>
+                <a href="#booking" class="block text-center border border-white/20 py-3 rounded hover:bg-white hover:text-black font-bold transition uppercase text-xs tracking-widest">Select Plan</a>
             </div>
             <div class="bg-darkCard p-10 border-2 border-brandRed rounded-2xl relative transform md:-translate-y-4 shadow-2xl">
-                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brandRed text-white px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">Most Popular</span>
-                <h3 class="text-xl font-bold mb-4">Event Coverage</h3>
-                <div class="text-4xl font-serif mb-6">₹7,499</div>
+                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brandRed text-white px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">Most Voted</span>
+                <h3 class="text-xl font-bold mb-4">Lifestyle & Candid</h3>
+                <div class="text-4xl font-serif mb-6">₹6,999</div>
                 <ul class="text-gray-400 space-y-4 mb-10 text-sm">
-                    <li><i class="fas fa-check text-brandRed mr-2"></i> 4 Hours Session</li>
-                    <li><i class="fas fa-check text-brandRed mr-2"></i> 40+ Color Graded Photos</li>
-                    <li><i class="fas fa-check text-brandRed mr-2"></i> Cinematic Post-Processing</li>
-                    <li><i class="fas fa-check text-brandRed mr-2"></i> Social Media Previews</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> 3 Hours Session</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> 35+ Fully Graded Photos</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Candid Post-Processing</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Social Media Delivery</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Travel (Upto 20KM)</li>
                 </ul>
-                <a href="#booking" class="block text-center bg-brandRed py-3 rounded btn-primary font-bold uppercase text-xs tracking-widest">Choose This Plan</a>
+                <a href="#booking" class="block text-center bg-brandRed py-3 rounded btn-primary font-bold uppercase text-xs tracking-widest">Select Plan</a>
             </div>
             <div class="bg-darkCard p-10 border border-white/5 rounded-2xl hover:border-brandRed/30 transition">
-                <h3 class="text-xl font-bold mb-4">The Film Look</h3>
-                <div class="text-4xl font-serif mb-6">₹14,999</div>
+                <h3 class="text-xl font-bold mb-4">Full Day Story</h3>
+                <div class="text-4xl font-serif mb-6">₹12,999</div>
                 <ul class="text-gray-400 space-y-4 mb-10 text-sm">
                     <li><i class="fas fa-check text-brandRed mr-2"></i> Full Day Coverage</li>
-                    <li><i class="fas fa-check text-brandRed mr-2"></i> Unlimited Edited Photos</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> 80+ Premium Edited Photos</li>
                     <li><i class="fas fa-check text-brandRed mr-2"></i> Priority 48h Delivery</li>
-                    <li><i class="fas fa-check text-brandRed mr-2"></i> Physical Photo Album</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Physical Photo Album (Option)</li>
+                    <li><i class="fas fa-check text-brandRed mr-2"></i> Unlimited Travel (T&C Apply)</li>
                 </ul>
-                <a href="#booking" class="block text-center border border-white/20 py-3 rounded hover:bg-white hover:text-black font-bold transition uppercase text-xs tracking-widest">Choose This Plan</a>
+                <a href="#booking" class="block text-center border border-white/20 py-3 rounded hover:bg-white hover:text-black font-bold transition uppercase text-xs tracking-widest">Select Plan</a>
             </div>
         </div>
     </section>
@@ -153,27 +179,53 @@
     <section id="booking" class="py-24 bg-darkCard">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16">
             <div data-aos="fade-up">
-                <h2 class="text-4xl font-serif mb-6">Let's Create Magic</h2>
-                <p class="text-gray-400 mb-8">Ready to book your session or have questions? Fill out the form or reach out directly.</p>
-                <div class="space-y-4 mb-8">
-                    <p><i class="fas fa-envelope text-brandRed mr-4"></i> yourframe52@gmail.com</p>
-                    <p><i class="fas fa-phone text-brandRed mr-4"></i> +91 7416903124</p>
-                </div>
-                <p class="text-sm font-bold text-brandRed uppercase tracking-widest animate-pulse">Limited slots available — book early</p>
+                <h2 class="text-4xl font-serif mb-6">Let's Frame <span class="italic font-light">Your</span> Story</h2>
+                <p class="text-gray-400 mb-8">Ready to book your session or discuss a project? Fill out the details below, or use the fast methods on the right.</p>
+                
+                <form action="https://formsubmit.co/yourframe52@gmail.com" method="POST" class="space-y-4 mb-8">
+                    <input type="text" name="name" placeholder="Your Name" required class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white">
+                    <input type="tel" name="phone" placeholder="WhatsApp Number" required class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white">
+                    <select name="type" class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-gray-500">
+                        <option value="" disabled selected>Select Shoot Type</option>
+                        <option value="portrait">Candid Portrait Session</option>
+                        <option value="lifestyle">Lifestyle & Candid</option>
+                        <option value="travel">Travel & Adventure</option>
+                        <option value="event">Event Storytelling</option>
+                    </select>
+                    <textarea name="message" placeholder="A few details about your shoot (Location, Date idea...)" rows="4" class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white"></textarea>
+                    
+                    <input type="hidden" name="_next" value="https://yourusername.github.io/frames52shots/success.html">
+                    <input type="hidden" name="_subject" value="New frames52shots Booking Form Submission!">
+                    <input type="hidden" name="_captcha" value="true"> <button type="submit" class="w-full bg-brandRed py-4 rounded font-bold uppercase tracking-widest btn-primary">Lock My Slot</button>
+                    <p class="text-xs font-bold text-brandRed uppercase tracking-widest animate-pulse mt-3 text-center">Form details will be verified by our team.</p>
+                </form>
             </div>
             
-            <form action="https://formsubmit.co/yourframe52@gmail.com" method="POST" class="space-y-4" data-aos="fade-up" data-aos-delay="200">
-                <input type="text" name="name" placeholder="Your Name" required class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white">
-                <input type="tel" name="phone" placeholder="Phone Number" required class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white">
-                <select name="type" class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white">
-                    <option value="portrait">Portrait Shoot</option>
-                    <option value="event">Event Coverage</option>
-                    <option value="wedding">Wedding / Pre-Wedding</option>
-                </select>
-                <textarea name="message" placeholder="Tell us about your shoot" rows="4" class="w-full bg-darkBg border border-white/10 p-4 rounded focus:border-brandRed outline-none transition text-white"></textarea>
-                <button type="submit" class="w-full bg-brandRed py-4 rounded font-bold uppercase tracking-widest btn-primary">Secure My Slot</button>
-                <input type="hidden" name="_next" value="https://yourusername.github.io/frames52shots/success.html">
-            </form>
+            <div class="space-y-8 self-start" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-xl font-bold mb-4">Direct Contact</h3>
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-envelope text-brandRed text-2xl"></i>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Email Us</p>
+                        <a href="mailto:yourframe52@gmail.com" class="text-gray-300 hover:text-brandRed transition">yourframe52@gmail.com</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-phone text-brandRed text-2xl"></i>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Direct Call</p>
+                        <a href="tel:7416903124" class="text-gray-300 hover:text-brandRed transition">+91 7416903124</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <i class="fab fa-whatsapp text-brandRed text-2xl"></i>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">WhatsApp Fast Booking</p>
+                        <a href="https://wa.me/917416903124" class="text-gray-300 hover:text-brandRed transition">Chat on WhatsApp</a>
+                    </div>
+                </div>
+                <p class="text-sm font-bold text-brandRed uppercase tracking-widest mt-6">Limited slots available — secure early.</p>
+            </div>
         </div>
     </section>
 
@@ -181,11 +233,11 @@
         <h2 class="text-3xl font-serif mb-12 not-italic">Client Love</h2>
         <div class="grid md:grid-cols-2 gap-12">
             <div data-aos="fade-up">
-                <p class="text-xl text-gray-300 mb-4">"The mood in the photos was exactly what I wanted. It felt like I was looking at movie stills!"</p>
-                <span class="text-brandRed font-bold not-italic">— Rahul K.</span>
+                <p class="text-xl text-gray-300 mb-4">"Absolutely captured the vibe of our group trip! The photos are so vibrant and feel like we are right back on the trail. Authentic work."</p>
+                <span class="text-brandRed font-bold not-italic">— Arjun P.</span>
             </div>
             <div data-aos="fade-up" data-aos-delay="200">
-                <p class="text-xl text-gray-300 mb-4">"Amazing experience, highly recommended! Professional, quick, and the color grading is top-tier."</p>
+                <p class="text-xl text-gray-300 mb-4">"I hate posing, but frames52shots made it feel so easy. The portrait captures me just being myself, in beautiful light. Best photo experience ever!"</p>
                 <span class="text-brandRed font-bold not-italic">— Sneha M.</span>
             </div>
         </div>
@@ -196,7 +248,8 @@
     </a>
 
     <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
-        <p>&copy; 2026 frames52shots. All rights reserved.</p>
+        <p class="text-xl font-serif font-bold tracking-tighter text-gray-500 mb-2">frames<span class="text-brandRed">52</span>shots</p>
+        <p>&copy; 2026 frames52shots. Authentic Stories. Real Emotions.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
