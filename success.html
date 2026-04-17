@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Captured | frames52shots</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brandRed: '#E63946', darkBg: '#0A0A0A' },
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-white h-screen flex items-center justify-center p-6 font-sans">
+    <div class="max-w-md text-center">
+        <div class="inline-flex items-center justify-center w-20 h-20 bg-brandRed/10 rounded-full mb-8">
+            <i class="fas fa-check text-brandRed text-3xl"></i>
+        </div>
+        
+        <h1 class="text-4xl font-serif mb-4">Moment Captured.</h1>
+        <p class="text-gray-400 mb-10 leading-relaxed">
+            Thank you for reaching out to <strong>frames52shots</strong>. Your booking request has been received. We’ll review your details and contact you via WhatsApp or Email within 24 hours.
+        </p>
+        
+        <a href="index.html" class="inline-block border border-white/20 px-8 py-3 rounded uppercase tracking-widest text-xs font-bold hover:bg-white hover:text-black transition duration-300">
+            Return to Portfolio
+        </a>
+    </div>
+</body>
+</html>
